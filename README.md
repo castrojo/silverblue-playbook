@@ -10,5 +10,5 @@ Reboot
 
 ```
 ansible-galaxy collection install ansible.posix community.general
-ansible-playbook -K silverblue.yml -l tien
+ansible-playbook -K jorge.yml -l tien -i jorge-hosts
 ```

@@ -1,0 +1,210 @@
+---
+flatpak_remotes:
+  flathub:
+    state: present
+    url: https://flathub.org/repo/flathub.flatpakrepo
+  flathub-beta:
+    state: present
+    url: https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+  fedora:
+    state: present
+    url: oci+https://registry.fedoraproject.org
+
+# Applications (non-beta)
+
+flatpak_flatpaks:
+  com.discordapp.Discord:
+    state: present
+    remote: flathub
+  com.github.tchx84.Flatseal:
+    state: present
+    remote: flathub
+  com.belmoussaoui.Obfuscate:
+    state: present
+    remote: flathub
+  com.getmailspring.Mailspring:
+    state: present
+    remote: flathub
+  com.obsproject.Studio:
+    state: present
+    remote: flathub
+  com.slack.Slack:
+    state: present
+    remote: flathub
+  com.spotify.Client:
+    state: present
+    remote: flathub
+  com.github.tchx84.Flatseal:
+    state: present
+    remote: flathub
+  com.todoist.Todoist:
+    state: present
+    remote: flathub
+  com.valvesoftware.Steam:
+    state: present
+    remote: flathub
+  com.visualstudio.code:
+    state: present
+    remote: flathub
+  de.haeckerfelix.Fragments:
+    state: present
+    remote: flathub
+  io.mpv.Mpv:
+    state: present
+    remote: flathub
+  org.audacityteam.Audacity:
+    state: present
+    remote: flathub
+  org.flameshot.Flameshot:
+    state: present
+    remote: flathub
+  org.freedesktop.Piper:
+    state: present
+    remote: flathub
+  org.gimp.GIMP:
+   state: present
+   remote: flathub
+  org.gnome.Extensions:
+    state: present
+    remote: flathub
+  org.gnome.Shotwell:
+    state: present
+    remote: flathub
+  org.gustavoperedo.FontDownloader:
+    state: present
+    remote: flathub
+  org.inkscape.Inkscape:
+    state: present
+    remote: flathub
+  org.kde.krita:
+    state: present
+    remote: flathub
+  org.libreoffice.LibreOffice:
+    state: present
+    remote: flathub
+  org.mozilla.firefox:
+    state: present
+    remote: flathub
+  im.riot.Riot:
+    state: present
+    remote: flathub
+  org.signal.Signal:
+    state: present
+    remote: flathub
+  org.standardnotes.standardnotes:
+    state: present
+    remote: flathub
+  us.zoom.Zoom:
+    state: present
+    remote: flathub
+
+  com.brave.Browser:
+    state: present
+    remote: flathub-beta
+  com.google.Chrome:
+    state: present
+    remote: flathub-beta
+  com.microsoft.Edge:
+    state: present
+    remote: flathub-beta
+  net.lutris.Lutris:
+    state: present
+    remote: flathub-beta
+
+  org.gnome.baobab:
+    state: present
+    remote: fedora
+  org.gnome.Calculator:
+    state: present
+    remote: fedora
+  org.gnome.Calendar:
+    state: present
+    remote: fedora
+  org.gnome.Characters:
+    state: present
+    remote: fedora
+  org.gnome.clocks:
+    state: present
+    remote: fedora
+  org.gnome.Contacts:
+    state: present
+    remote: fedora
+  org.gnome.eog:
+    state: present
+    remote: fedora
+  org.gnome.Evince:
+    state: present
+    remote: fedora
+  org.gnome.FileRoller:
+    state: present
+    remote: fedora
+  org.gnome.font-viewer:
+    state: present
+    remote: fedora
+  org.gnome.gedit:
+    state: absent
+    remote: fedora
+  org.gnome.Geary:
+    state: present
+    remote: fedora
+  org.gnome.Logs:
+    state: present
+    remote: fedora
+  org.gnome.Maps:
+    state: present
+    remote: fedora
+  org.gnome.Meld:
+    state: present
+    remote: fedora
+  org.gnome.NautilusPreviewer:
+    state: present
+    remote: fedora
+  org.gnome.Screenshot:
+    state: present
+    remote: fedora
+  org.gnome.Weather:
+    state: present
+    remote: flathub
+
+rpm_ostree_base_packages:
+  firefox:
+    state: absent
+  gnome-software-rpm-ostree:
+    state: present
+  gnome-software:
+    state: present
+
+rpm_ostree_layered_packages:
+  ansible:
+    state: present
+  gamescope:
+    state: present
+  libratbag-ratbagd:
+    state: present
+  lm_sensors: 
+    state: present  
+  mangohud: 
+    state: present
+  neovim:
+    state: present
+  starship:
+    state: present
+  
+
+  gnome-shell-extension-appindicator:
+    state: present
+  gnome-shell-extension-sound-output-device-chooser:
+    state: present
+  gnome-shell-extension-gamemode:
+    state: present
+  gnome-shell-extension-frippery-move-clock:
+    state: present
+  gnome-shell-extension-dash-to-dock:
+    state: present
+  gnome-shell-extension-gsconnect:
+    state: present
+
+  etc_sysctl_params:
+   fs.inotify.max_user_watches:
+    value: 524288
+    state: present

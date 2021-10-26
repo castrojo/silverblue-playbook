@@ -1,0 +1,9 @@
+---
+- name: "Set up Silverblue workstation"
+  hosts:
+    - jorge
+  connection: "local"
+  roles:
+    - flatpak
+    - rpm-ostree
+    - etc
