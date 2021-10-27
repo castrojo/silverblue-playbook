@@ -62,8 +62,11 @@ flatpak_flatpaks:
     state: present
     remote: flathub
   org.gimp.GIMP:
-   state: present
-   remote: flathub
+    state: present
+    remote: flathub
+  org.gnome.Dejadup:
+    state: present
+    remote: flathub
   org.gnome.Extensions:
     state: present
     remote: flathub
