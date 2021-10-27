@@ -1,5 +1,6 @@
 ---
 - name: "Set up Silverblue workstation"
+  ignore_errors: yes
   hosts:
     - jorge
   connection: "local"
@@ -7,3 +8,4 @@
     - flatpak
     - rpm-ostree
     - etc
+    - gnome

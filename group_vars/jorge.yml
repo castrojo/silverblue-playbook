@@ -180,19 +180,8 @@ rpm_ostree_base_packages:
 rpm_ostree_layered_packages:
   ansible:
     state: present
-  gamescope:
-    state: present
   libratbag-ratbagd:
     state: present
-  lm_sensors: 
-    state: present  
-  mangohud: 
-    state: present
-  neovim:
-    state: present
-  starship:
-    state: present
-  
 
   gnome-shell-extension-appindicator:
     state: present
