@@ -1,0 +1,15 @@
+---
+
+# tasks file for gnome
+- name: "Enable the NightLight"
+  community.general.dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
+    value: "true"
+    state: "present"
+    
+- name: "Window Buttons"
+  community.general.dconf:
+    key: "/org/gnome/desktop/wm/preferences/button-layout"
+    value: "'appmenu:maximize,close'"
+    state: "present"
+
